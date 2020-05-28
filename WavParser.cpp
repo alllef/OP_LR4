@@ -1,11 +1,7 @@
 
 #include "WavParser.h"
 #include "WAVFILE.h"
-#include <cstdint>
-#include <cstdlib>
 #include <cstdio>
-#include <iostream>
-#include <fstream>
 using namespace std;
 void WavParser::readHEADER(WAVFILE &myFile) {
     FILE *input;

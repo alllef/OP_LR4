@@ -11,6 +11,7 @@ public:
     HEADER header;
       short int *myData;// семпли
     void setData();
+    void changeDuration(int size );
 };
 
 
