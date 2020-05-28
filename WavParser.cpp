@@ -7,7 +7,7 @@
 #include <iostream>
 #include <fstream>
 using namespace std;
-void WavParser::readHEADER(WAVFILE myFile) {
+void WavParser::readHEADER(WAVFILE &myFile) {
     FILE *input;
     errno_t err;
     err = fopen_s(&input, "input.wav", "rb");
@@ -18,14 +18,10 @@ void WavParser::readHEADER(WAVFILE myFile) {
         fread(&myFile.myData[i],  myFile.header.blockAlign,1, input);
     }
 
-    for(int i=0; i<myFile.header.subchunk2Size/2;i++){
-        cout<<myFile.myData[i]<<endl;
-    }
-
     fclose(input);
 }
 
-void WavParser::writeHEADER(WAVFILE myFile) {
+void WavParser::writeHEADER(WAVFILE &myFile) {
 ofstream  create;
 create.open("output.wav", ios::binary);
 create.close();

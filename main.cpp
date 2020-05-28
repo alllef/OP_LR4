@@ -11,7 +11,7 @@ int main() {
 WAVFILE myFile{};
 WavParser parser;
 parser.readHEADER(myFile);
-//parser.writeHEADER(myFile);
+parser.writeHEADER(myFile);
 
     return 0;
 }

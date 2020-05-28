@@ -10,8 +10,8 @@
 
 class WavParser {
 public:
-    void readHEADER(WAVFILE myFile);
-    void writeHEADER(WAVFILE myFile);
+    void readHEADER(WAVFILE &myFile);
+    void writeHEADER(WAVFILE &myFile);
 
 };
 
