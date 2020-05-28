@@ -1,6 +1,4 @@
-//
-// Created by alekz29 on 27.05.2020.
-//
+
 
 #ifndef OP_LR4_WAVPARSER_H
 #define OP_LR4_WAVPARSER_H
@@ -10,8 +8,8 @@
 
 class WavParser {
 public:
-    void readHEADER(WAVFILE &myFile);
-    void writeHEADER(WAVFILE &myFile);
+    void readWav(WAVFILE &myFile, char *fileName);
+    void writeWav(WAVFILE &myFile, char *fileName);
 
 };
 

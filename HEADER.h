@@ -1,6 +1,3 @@
-//
-// Created by alekz29 on 28.05.2020.
-//
 
 #ifndef OP_LR4_HEADER_H
 #define OP_LR4_HEADER_H

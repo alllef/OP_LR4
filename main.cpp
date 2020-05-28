@@ -1,17 +1,10 @@
-#include <iostream>
-#include<cstdint>
-#include <fstream>
-#include "WAVFILE.h"
-#include "WavParser.h"
-using namespace std;
-
+#include<Windows.h>
+#include "UserInterface.h"
 
 
 int main() {
-WAVFILE myFile{};
-WavParser parser;
-parser.readHEADER(myFile);
-myFile.changeDuration(3);
-parser.writeHEADER(myFile);
+    SetConsoleOutputCP(CP_UTF8);
+    UserInterface myInterface{};
+    myInterface.makeMenu();
     return 0;
 }
