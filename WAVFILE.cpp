@@ -4,7 +4,7 @@
 #include "WAVFILE.h"
 
 void WAVFILE::setData() {
-    myData=new short int[header.subchunk2Size/2];
+    myData=new short int [header.subchunk2Size/2];
 }
 
 

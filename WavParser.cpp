@@ -22,12 +22,9 @@ void WavParser::readHEADER(WAVFILE &myFile) {
 }
 
 void WavParser::writeHEADER(WAVFILE &myFile) {
-ofstream  create;
-create.open("output.wav", ios::binary);
-create.close();
     FILE *output;
     errno_t err;
-    err = fopen_s(&output, "output.wav", "w");
+    err = fopen_s(&output, "output.wav", "wb");
     fwrite(&myFile.header, sizeof(myFile.header), 1, output);
     for(int i=0; i<myFile.header.subchunk2Size/2;i++){
         fwrite(&myFile.myData[i],  myFile.header.blockAlign,1, output);
