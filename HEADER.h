@@ -2,7 +2,7 @@
 #ifndef OP_LR4_HEADER_H
 #define OP_LR4_HEADER_H
 #include <cstdint>
-struct HEADER{
+struct HEADER{//хедер wav файла размером 44 байта
 
     int32_t chunkId;   // Завжди містить значення 0x52494646 (літери "RIFF")
     int32_t chunkSize; // 36 + розмір другого підрозділу в байтах

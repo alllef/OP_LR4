@@ -1,4 +1,4 @@
-
+// просто интерфейс пользователя
 #include "UserInterface.h"
 #include <iostream>
 #include "WavParser.h"
