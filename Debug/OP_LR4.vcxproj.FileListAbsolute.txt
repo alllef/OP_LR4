@@ -1,0 +1,3 @@
+C:\Users\bryto\source\repos\OP_LR4\Debug\OP_LR4.vcxprojAssemblyReference.cache
+C:\Users\bryto\source\repos\OP_LR4\Debug\OP_LR4.exe
+C:\Users\bryto\source\repos\OP_LR4\Debug\OP_LR4.pdb
