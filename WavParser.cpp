@@ -34,5 +34,11 @@ void WavParser::writeWav(WAVFILE &myFile, char *fileName) {
         }
     }
     fclose(output);
-
+    while (true) {
+        fread(&dataChunk, sizeof(dataChunk), 1, input);
+        if (*(unsigned int*)&dataChunk.subchunk2Id == 0x61746164)
+            break;
+        //skip chunk data bytes
+        fseek(input, dataChunk.subchunk2Size, SEEK_CUR);
+    }
 }
