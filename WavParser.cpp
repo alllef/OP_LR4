@@ -32,13 +32,6 @@ void WavParser::writeWav(WAVFILE &myFile, char *fileName) {
         for (int i = 0; i < myFile.header.subchunk2Size / myFile.header.blockAlign; i++) {
             fwrite(&myFile.myData[i], myFile.header.blockAlign, 1, output);//записываем данные
         }
-        while (true) {
-            fread(&dataChunk, sizeof(dataChunk), 1, input);
-            if (*(unsigned int*)&dataChunk.subchunk2Id == 0x61746164)
-                break;
-            //skip chunk data bytes
-            fseek(input, dataChunk.subchunk2Size, SEEK_CUR);
-        }
     }
     fclose(output);
 }
